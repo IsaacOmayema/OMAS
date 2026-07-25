@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2? family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap');
+body{
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+h1,h2,h3{
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --text_color1: rgb(33,122,69);
+
+}
+header{
+    width: 100%;
+    height: 300px;
+    background: url(image/bg1.jpg) no-repeat center center;
+    background-size: cover ;
+}
+header nav{
+    height: 50px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 7px ;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 2px 4px 4px rgba(255, 255, 255, .2);
+}
+header nav li{
+    display: inline-block;
+    margin: 10px;
+}
+header nav li a{
+    text-decoration: none;
+    color: limegreen;
+    font-size: 20px;
+}
+header .logo{
+    margin: 5px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: black;
+}
+.wrapper{
+    max-width: 100%;
+    width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    min-height: 200px;
+    color: var(--text_color1);
+}
+footer ul li{
+    font-size: 13px;
+    list-style-type: none;
+}
+footer p{
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    bottom: 10px;
+    font-size: 10px;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+}
+
+ .flexbox{
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+}
+.flex.flex1{
+    flex: 1;
+}
+.flex.flex2{
+    flex: 2;
+}
+.flex.flex3{
+    flex: 3;
+}
+aside{
+    height: 400px;
+    background: rgba(0,0,0,1);
+    position: relative;
+    border-radius: 30px;
+}
+aside span{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    color: var(--text_color1);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+aside span div p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+main{
+    margin: 15px;
+}
+.body .active{
+    display: block;
+}
+.body section{
+    display: none;
+    height: 500px;
+}
+.contact main .contact_body{
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: rgba(33,122,69,.3);
+    box-shadow: -2px -4px 40px rgba(0, 0, 0, .2);
+    padding: 30px;
+    width: fit-content;
+    justify-self: center;
+    display: grid;
+}
+.contact main .contact_body .inputs{
+    margin: 5px;
+    display: flex;
+}
+.input-group input{
+    color: var(--text_color1);
+    width: 150px;
+    height: 30px;
+    border: solid 0.5px var(--text_color1);
+    border-radius: 7px;
+    outline: none;
+}
+.input-group label{
+    position: absolute;
+    left: 10px;
+    transition: 0.3s all ease;
+    color: var(--text_color1);
+
+}
+.input-group{
+    position: relative;
+}
+.input-group input:focus+label{
+    top: -16px;
+    font-size: 12px;
+}
+.input-group input:not(:placeholder-shown)+label{
+    top: -16px;
+    font-size: 12px;
+}
+#message{
+    resize: none;
+    max-width: 300px;
+    width: 100%;
+    height: 150px;
+    border-radius: 7px;
+    border: solid 0.5px var(--text_color1);
+    margin: 15px;
+    color: var(--text_color1);
+}
+#message::placeholder{
+    color: var(--text_color1);
+}
+.contact main .contact_body button{
+    display: block;
+    border: none;
+    max-width: 300px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px;
+    background: var(--text_color1);
+    color: #fff;
+    transition: .4s all ;
+    transform: translateY(0);
+    box-shadow: 2px 4px 4px rgba(255, 255, 255, .2);
+    margin: 20px;
+}
+.contact main .contact_body button:hover{
+    background: rgba(33,122,69,.7);
+    transform: translateY(5px);
+
+}
+.Infoanimation{
+    color: dimgray;
+    font-family : 'Inter' sans-serif;
+    font-size: 50px;
+}
+.Infoanimation i::before{
+    display: block;
+    transition: all 2s ease;
+    animation: info 2s infinite alternate;
+    content: 'Web Developer';
+}
+@keyframes info {
+    from{
+        content: 'Web Developer';
+        color: var(--text_color1);
+    }
+    to{
+        content: 'Software Engineer';
+        color: rgba(33,122,69,.3);
+    }
+    
+}
+@media only screen and (max-width: 786px) {
+    .body section{
+        height: fit-content;
+    }
+    section .flexbox{
+        display: block;
+    }
+    aside{
+        height: 450px;
+    }
+}
