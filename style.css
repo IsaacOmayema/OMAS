@@ -64,7 +64,7 @@ header nav{
         display: none;
         border: none;
         background: transparent;
-        color: var(--text_color1);
+        color: red;
         left: 90%;
     }
     .close{
