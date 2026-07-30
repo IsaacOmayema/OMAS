@@ -8,21 +8,36 @@
     <link rel="stylesheet" href="spinner.css">   
 </head>
 <body>
-    <header> 
+    <header id="top"> 
         <div class="wrapper">
+            <div class="menubtn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         <nav class="menubar">
+            <button id="close">X</button>
             <div class="logo"></div>
             <ul>
-                <li><a href="#" id="home" >Home</a></li>
-                <li><a href="#" id="about">About</a></li>
-                <li><a href="#" id="contact">Contact</a></li>
-                <li><a href="#" id="gallery">Gallery</a></li>
+                <li>
+                    <a id="home">Home</a>
+                </li>
+                <li>
+                    <a  id="about">About</a>
+                </li>
+                <li>
+                    <a id="contact">Contact</a>
+                </li>
+                <li>
+                    <a id="gallery">Gallery</a>
+                </li>
             </ul>
         </nav>
 
 
 
         </div>
+        <div class="logo2"></div>
     </header>
     <div class="body">
         <section class="home active">
@@ -53,7 +68,31 @@
         <div class="wrapper">
             <div class="flexbox">
                 <main class="flex flex3">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt non velit. Ea perferendis neque explicabo voluptatem ex corrupti, ab sequi, quod rem unde provident odit ipsam sit ducimus, officia facilis voluptatibus. Doloribus, est unde illo beatae accusamus dolores? Soluta eum saepe ullam tempora atque quam facere mollitia doloribus officia!
+                    <div class="about_content">
+                        <div class="about_card">
+                        <div class="profile_picture">
+                            
+                        </div>
+                        <h1>
+                            Isaac Omayema 
+                        </h1>
+                        <h4>
+                            31st October 2007
+                        </h4>
+
+                        <p>
+                            <h3>Web Developer</h3>
+                            Known Programming Languages: <br><img src="image/html.svg" alt="HTML"><img src="image/css.svg" alt="CSS"><img src="image/js.svg" alt="JS"><img src="image/python.svg" alt="Python"><br>
+                            What I Want To Learn: <br> 
+                            <img src="image/bg1.jpg" alt="React"><img src="image/bg1.jpg" alt="NodeJs"><img src="image/bg1.jpg" alt="Django"><img src="image/bg1.jpg" alt="Tailwind"><br>
+                            Projects:
+                            <button class="projects_btn">Projects</button>
+                        </p>
+                        <div class="social">
+                            <img src="image/github.svg" alt="github"><img src="image/gmail.svg" alt="gmail"><img src="image/whatsapp.svg" alt="whatsapp"><img src="image/tictok.svg" alt="TicTok">
+                        </div>
+                    </div>
+                    </div>
                 </main>
                 <aside class="flex flex2">
                     <span>
@@ -68,6 +107,7 @@
             <div class="flexbox">
                 <main class="flex flex3">
                     <div class="contact_body">
+                        <h2>Get In Touch</h2><br>
                         <form action="">
                             <div class="inputs">
                                 <div class="input-group">
@@ -85,8 +125,8 @@
                     </div>
                 </main>
                 <aside class="flex flex2">
-                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde enim dolor qui delectus ea cum, fuga pariatur vitae quaerat quibusdam est. Incidunt dolores quo fuga magnam exercitationem odit praesentium blanditiis.
-
+                <span> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolorem voluptate, maiores saepe dignissimos esse magnam, vel cupiditate pariatur aut ex qui nostrum fugiat iure odit corporis tempora amet architecto.
                 </span>
                 </aside>
             </div>
@@ -109,13 +149,15 @@
     </section>
     </div>
     
-
+    <button class="top_btn"><a href="#top">&#8593;</a></button>
     
     <footer>
         <div class="wrapper">
         <div class="flexbox">
-            <div class="flex flex1">
-                <h2>Contact Info</h2>
+
+            <div class="flex flex2" id="footer_contact">
+                <div class="flex flex1">
+                <h2>Contact</h2>
                 <ul>
                     <li>&#128241; <span>+234 7010 2070 88</span></li>
                     <li>&#128232; isaacomayema@gmail.com</li>
@@ -124,40 +166,30 @@
                 </ul>
             </div>
             <div class="flex flex1">
-                <h2>Socials</h2>
+                <h2>Social</h2>
                 <ul>
                     <li>
-                        <img src="image/whatsapp.svg" alt="whatsapp">
+                        <img loading="lazy" src="image/whatsapp.svg" alt="whatsapp">
                     </li>
                     <li>
-                        <img src="image/tictok.svg" alt="TickTok">
+                        <img loading="lazy" src="image/tictok.svg" alt="TickTok">
                     </li>
                     <li>
-                        <img src="image/telegram.svg" alt="Telegram">
+                        <img loading="lazy" src="image/telegram.svg" alt="Telegram">
                     </li>
                 </ul>
             </div>
-            <div class="flexflex1">
-                <h2>Technology</h2>
-                <ul>
-                    <li>
-                        <img src="image/css.svg" alt="CSS">
-                    </li>
-                    <li>
-                        <img src="image/github.svg" alt="GitHub">
-                    </li>
-                    <li>
-                        <img src="image/html.svg" alt="html">
-                    </li>
-                    <li>
-                        <img src="image/js.svg" alt="JavaScript">
-                    </li>
-                </ul>
+            </div>
+            <div class="flex flex1">
+                <div class="image">
+
+                </div>
             </div>
         <p>&copy; 2026 Omayema Isaac, All Rights Reserved </p>
         </div>
-    </footer>
 
+    </footer>
+    
 </body>
 <script src="index.js"></script>
 </html>

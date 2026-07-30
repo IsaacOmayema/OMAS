@@ -33,4 +33,23 @@ gallery.addEventListener('click', () => {
     document.querySelector('.gallery').classList.add('active');
 });
 
+const open = document.querySelector('.menubtn');
+const closebtn = document.querySelector('#close');
+closebtn.addEventListener('click' , () => {
+    document.querySelector('.menubar').classList.remove('open');
+});
+open.addEventListener('click', ()=>{
+    document.querySelector('.menubar').classList.add('open');
 
+});
+
+
+
+window.addEventListener('scroll', ()=>{
+    const top = document.querySelector('.top_btn');
+    if (window.scrollY > 50) {
+        top.style.display = 'block'
+    } else {
+        top.style.display = 'none'
+    }
+});
