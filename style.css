@@ -64,13 +64,14 @@ header nav{
         display: none;
         border: none;
         background: transparent;
-        color: red;
+        color: green;
         left: 90%;
     }
     .close{
         display: none;
     }
 header nav li{
+    width: fit-content;
     cursor: pointer;
     display: inline-block;
     margin: 10px;
@@ -83,8 +84,8 @@ header nav li a{
 header .logo{
     margin: 5px;
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: url('image/logo.png') no-repeat;
     background-size: 100% 100%;
     border-radius: 10px;
@@ -181,6 +182,20 @@ main{
     overflow-y: auto;
 }
 .about_card{
+    position: relative;
+}
+.about_card:hover .front_card{
+    transition: 2s ease;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+.about_card:hover  .back_card{
+    backface-visibility: visible;
+    transition: 2s ease;
+    transform: rotateY(360deg);
+}
+.front_card{
     width: 350px;
     height: 500px;
     filter: drop-shadow(-10px -20px 30px var(--text_color1));
@@ -189,12 +204,32 @@ main{
     justify-self: center;
     border-radius: 50px ;
     padding: 10px;
+
     img{
         width: 20px;
         height: 20px;
     }
 
 }
+.back_card{
+    transform: rotateY(180deg);
+    backface-visibility: hidden ;
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height: 500px;
+    filter: drop-shadow(-10px -20px 30px var(--text_color1));
+    background: rgba(255, 255, 255, .2);
+    border: solid 0.5px black;
+    justify-self: center;
+    border-radius: 50px ;
+    padding: 15px;
+    p{
+        margin: 5px;
+    }
+
+}
+
 .social{
     display: flex;
     justify-content: center;
@@ -203,12 +238,10 @@ main{
     width: 20px;
     height: 20px;
 }
-.about_content{
-    display: flex;
-    justify-content: center;
-    
-}
-.projects_btn{
+
+.back_btn{
+    position: absolute;
+    left: 85%;
     width: fit-content;
     height: 30px;
     border-radius: 10px;
@@ -350,6 +383,7 @@ main{
 }
 
 @media only screen and (max-width: 700px) {
+    
     .logo2{
         display: block;
     }
@@ -368,14 +402,13 @@ main{
     aside{
         height: 450px;
     }
-    header{
-        
-        .menubtn{
+    .menubtn{
             display: block;
             float: right;
             position: fixed;
-            z-index: 2;
+            z-index: 3;
         }
+    header{
         .open{
             visibility: visible;
         }

@@ -1,3 +1,4 @@
+// Sectional toggle switch 
 const home = document.querySelector('#home');
 const about = document.querySelector('#about');
 const contact = document.querySelector('#contact');
@@ -32,7 +33,10 @@ gallery.addEventListener('click', () => {
     document.querySelector('.contact').classList.remove('active');
     document.querySelector('.gallery').classList.add('active');
 });
+// sectional toggle switch end here
 
+
+//Small device navbar display 
 const open = document.querySelector('.menubtn');
 const closebtn = document.querySelector('#close');
 closebtn.addEventListener('click' , () => {
@@ -43,8 +47,16 @@ open.addEventListener('click', ()=>{
 
 });
 
+// closing navbar when other partvof the page is clicked 
+const Body = document.querySelector('.body');
+Body.addEventListener('click' , () => {
+    if(document.querySelector('.menubar').classList.contains('open')){
+        document.querySelector('.menubar').classList.remove('open')
+    }
+})
 
 
+// Back to top display when window is scrolled 
 window.addEventListener('scroll', ()=>{
     const top = document.querySelector('.top_btn');
     if (window.scrollY > 50) {
@@ -53,3 +65,5 @@ window.addEventListener('scroll', ()=>{
         top.style.display = 'none'
     }
 });
+
+
