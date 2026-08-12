@@ -188,14 +188,14 @@ main{
     transition: 2s ease;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    
 }
 .about_card:hover  .back_card{
     backface-visibility: visible;
     transition: 2s ease;
-    transform: rotateY(360deg);
+    transform: rotateY(360deg)
 }
 .front_card{
+    transition: all 2s cubic-bezier(0.25,0.8,0.25,1) ;
     width: 300px;
     height: 500px;
     filter: drop-shadow(-10px -20px 30px var(--text_color1));
@@ -212,6 +212,7 @@ main{
 
 }
 .back_card{
+    transition: all 2s cubic-bezier(0.25,0.8,0.25,1) ;
     transform: rotateY(180deg);
     backface-visibility: hidden ;
     position: absolute;
@@ -381,9 +382,48 @@ main{
 .about_content span{
     margin: 2px;
 }
+/* Gallery image display style*/
+.image_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black;
+    justify-content: center;
+    justify-self: center;
+}
+.image_container  img{
+    transition: all .7s cubic-bezier(0.25,0.8,0.25,1) ;
+    margin: 5px;
+    width: 100px;
+    object-fit: cover;
+    height: 100px;
+    border-radius: 10px;
+    border: solid 3px rgb(33,122,69);
+}
+.image_container div{
+    position: relative;
+}
+.image_container div h4{
+    position: absolute;
+    bottom: 5px;
+    visibility: hidden;
+}
+.image_container  img:hover{
+    transition: all .7s cubic-bezier(0.25,0.8,0.25,1) ;
+    transform: scale(1.09);
+    
+}
+@media only screen and (max-width: 320px) {
+    .image_container{
+        width: 300px;
+    }
+
+}
 
 @media only screen and (max-width: 700px) {
-    
     .logo2{
         display: block;
     }
