@@ -926,7 +926,7 @@
 
 
 /* From Uiverse.io by Valeron-T */ 
-.loader {
+.loader2 {
   position: relative;
   width: 150px;
   height: 150px;
@@ -940,7 +940,7 @@
   overflow: hidden;
 }
 
-.loader::before {
+.loader2::before {
   content: "";
   position: absolute;
   inset: 20px;
@@ -950,7 +950,7 @@
   box-shadow: inset 0px 0px 5px seagreen;
 }
 
-.loader::after {
+.loader2::after {
   content: "";
   position: absolute;
   width: 50px;
@@ -960,7 +960,7 @@
   box-shadow: inset 0px 0px 3px seagreen;
 }
 
-.loader span {
+.loader2 span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -973,7 +973,7 @@
   border-top: 2px solid #2e8b57;
 }
 
-.loader span::before {
+.loader2 span::before {
   display: none;
   content: "";
   position: absolute;
