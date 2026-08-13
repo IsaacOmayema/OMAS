@@ -427,7 +427,7 @@ main{
 }
 #popup_content{
     position: absolute;
-    width: 100%;
+    width: 97%;
     max-width: 400px;
     height: 320px;
     border: solid 5px var(--text_color1);
@@ -464,7 +464,7 @@ main{
         width: 300px;
     }
     #popup_image img{
-        width: 290px;
+        width: 310px;
         height: 300px;
     }
 }
