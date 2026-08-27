@@ -122,8 +122,11 @@ footer img{
     width: 20px;
     height: 20px;
 }
-
- .flexbox{
+#skills{
+    overflow-y: scroll;
+    height: 300px;
+}
+.flexbox{
     padding: 10px;
     margin: 5px;
     display: flex;
@@ -298,7 +301,7 @@ main{
     top: -16px;
     font-size: 12px;
 }
-#message{
+.message{
     resize: none;
     max-width: 250px;
     width: 100%;
@@ -308,10 +311,10 @@ main{
     margin: 15px;
     color: var(--text_color1);
 }
-#message::placeholder{
+.message::placeholder{
     color: var(--text_color1);
 }
-.contact main .contact_body button{
+.contact main .contact_body .button{
     display: block;
     border: none;
     max-width: 250px;
@@ -326,7 +329,7 @@ main{
     box-shadow: 2px 4px 4px rgba(255, 255, 255, .2);
     margin: 20px;
 }
-.contact main .contact_body button:hover{
+.contact main .contact_body .button:hover{
     background: rgba(33,122,69,.7);
     transform: translateY(5px);
 
@@ -466,6 +469,34 @@ main{
     #popup_image img{
         width: 290px;
         height: 300px;
+    }
+}
+/* Past Projects*/
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(33,122,69,.3);
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+.project_btn{
+    display: block;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background: var(--text_color1);
+    color: #fff;
+    margin: 5px;
+    a{
+        text-decoration: none;
+        color: #fff;
     }
 }
 
