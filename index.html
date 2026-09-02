@@ -6,7 +6,7 @@
     <meta name="description" content="My personal portfolio website and my coding projects.">
     <meta name="keywords" content="portfolio, web development, HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omayema</title>
+    <title>Omayema | Home</title>
     <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="spinner.css">   
@@ -22,17 +22,17 @@
         <nav class="menubar">
             <button id="close">X</button>
             <div class="logo"></div>
-            <ul>
-                <li>
+            <ul id="links">
+                <li class="link">
                     <a id="home">Home</a>
                 </li>
-                <li>
+                <li class="link">
                     <a  id="about">About</a>
                 </li>
-                <li>
+                <li class="link">
                     <a id="contact">Contact</a>
                 </li>
-                <li>
+                <li class="link">
                     <a id="gallery">Gallery</a>
                 </li>
             </ul>
@@ -61,9 +61,9 @@
             </span>
         </aside>
 
-        <main class="flex flex3">
+        <main class="flex flex3 home_main" >
             <div class="flexbox">
-                <div class="flex flex2" id="skills">
+                <div class="flex flex3" id="skills">
                     <h2>Skills</h2>
                     <p>
                             <strong>Audio Engineer: </strong>
@@ -78,10 +78,12 @@
                     <h2>Past Projects</h2>
                     <div class="projects">
                         <div class="project">
-                            <img src="image/html.svg" alt="Rock Paper Scrissor Game">
-                            <div class="describtion">
+                            <img src="image/rockpaperscissor.png" alt="Rock Paper Scrissor Game">
+                            <div class="description">
                                 <h3>Rock Paper Scissor</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tempora odio iste commodi velit vitae! Corrupti eaque omnis quam quisquam!</p>
+                                <p>
+                                    A simple interactive Rock Paper Scissors game built to demonstrate JavaScript logic, user interaction, and random computer choices.
+                                </p>
                             </div>
                           
                         </div>
@@ -114,9 +116,9 @@
                         <p>
                             <h3>Web Developer</h3>
                             Known Programming Languages: <br><img src="image/html.svg" alt="HTML"><img src="image/css.svg" alt="CSS"><img src="image/js.svg" alt="JS"><img src="image/python.svg" alt="Python"><br>
-                            What I Want To Learn: <br> 
+                            What I Want To Learn: <br>  <button class="back_btn">Back</button>
                             <img src="image/react.svg" alt="React"><img src="image/nodejs.svg" alt="NodeJs"><img src="image/django.svg" alt="Django"><img src="image/tailwind.svg" alt="Tailwind"><br>
-                            <button class="back_btn">Back</button>
+                           
                         </p>
                         <br>
                         
@@ -156,7 +158,7 @@
                 </main>
                 <aside class="flex flex2">
                     <span>
-                        <p class="Infoanimation">I am <i id="info"></i></p>
+                        <p class="Infoanimation">I am a<i id="info"></i></p>
                     </span>
                 </aside>
             </div>
@@ -323,11 +325,13 @@
 
                 </div>
             </div>
-        <p>&copy; 2026 Omayema Isaac, All Rights Reserved </p>
+        
         </div>
-
+        <p> &copy; 2026 Omayema Isaac, All Rights Reserved </p>
     </footer>
-    
+    <div class="screen_loader">
+        <span class="main_loader"></span>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>

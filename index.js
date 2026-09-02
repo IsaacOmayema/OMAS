@@ -1,9 +1,19 @@
+document.addEventListener('DOMContentLoaded', () => {
+    displayLoader();
+})
+
 // Sectional toggle switch 
 const home = document.querySelector('#home');
 const about = document.querySelector('#about');
 const contact = document.querySelector('#contact');
 const gallery = document.querySelector('#gallery');
 const body = document.querySelector('body');
+function displayLoader(){
+    document.querySelector('.screen_loader').style.display = "block";
+    setTimeout(() => {
+        document.querySelector('.screen_loader').style.display = "none";
+    }, 1500)
+}
 
 home.addEventListener('click', () => {
     body.classList.add('active');
@@ -11,6 +21,8 @@ home.addEventListener('click', () => {
     document.querySelector('.about').classList.remove('active');
     document.querySelector('.contact').classList.remove('active');
     document.querySelector('.gallery').classList.remove('active');
+    displayLoader();
+    document.querySelector('.menubar').classList.remove('open');
 });
 about.addEventListener('click', () => {
     body.classList.add('active');
@@ -18,6 +30,8 @@ about.addEventListener('click', () => {
     document.querySelector('.about').classList.add('active');
     document.querySelector('.contact').classList.remove('active');
     document.querySelector('.gallery').classList.remove('active');
+    displayLoader();
+    document.querySelector('.menubar').classList.remove('open');
 });
 contact.addEventListener('click', () => {
     body.classList.add('active');
@@ -25,6 +39,8 @@ contact.addEventListener('click', () => {
     document.querySelector('.about').classList.remove('active');
     document.querySelector('.contact').classList.add('active');
     document.querySelector('.gallery').classList.remove('active');
+    displayLoader();
+    document.querySelector('.menubar').classList.remove('open');
 });
 gallery.addEventListener('click', () => {
     body.classList.add('active');
@@ -32,6 +48,8 @@ gallery.addEventListener('click', () => {
     document.querySelector('.about').classList.remove('active');
     document.querySelector('.contact').classList.remove('active');
     document.querySelector('.gallery').classList.add('active');
+    displayLoader();
+    document.querySelector('.menubar').classList.remove('open');
 });
 // sectional toggle switch end here
 
@@ -47,7 +65,7 @@ open.addEventListener('click', ()=>{
 
 });
 
-// closing navbar when other partvof the page is clicked 
+// closing navbar when other parts of the page is clicked 
 const Body = document.querySelector('.body');
 Body.addEventListener('click' , () => {
     if(document.querySelector('.menubar').classList.contains('open')){
@@ -55,6 +73,8 @@ Body.addEventListener('click' , () => {
     }
 });
 
+
+// contact form submission
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('input[type="submit"]');
 
@@ -132,3 +152,4 @@ popup.addEventListener('click', function(){
         popupContent.removeChild(img);
     }
 });
+
