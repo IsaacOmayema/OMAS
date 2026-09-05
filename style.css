@@ -51,6 +51,7 @@ header nav{
 }
 .menubtn{
     display: none;
+    cursor: pointer;
 }
 .menubtn div{
     width: 20px;
@@ -509,7 +510,7 @@ main{
     gap: 3px;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 3px;
     padding: 10px;
     border-radius: 20px;
     background: rgba(0,0,0,1);
