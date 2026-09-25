@@ -2,6 +2,22 @@
     margin: 0;
     box-sizing: border-box;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    a{
+        text-decoration: none;
+    }
+}
+#back{
+    border-radius: 15px;
+    background: transparent;
+    outline: solid 2px rgb(33,122,69);
+    width: fit-content;
+    padding: 5px ;
+    
+    a{
+        text-decoration: none;
+        color: white;
+
+    }
 
 }
 html{
@@ -50,30 +66,21 @@ header nav{
     box-shadow: 2px 4px 4px rgba(255, 255, 255, .2);
 }
 .menubtn{
+    color: var(--text_color1);
     display: none;
-    cursor: pointer;
+    left: 100%;
+}
+.menubtn.change{
+    left: 90%;
 }
 .menubtn div{
     width: 20px;
     height: 3px;
     display: block;
     background: var(--text_color1);
-    margin: 3px;
+    margin: 1px;
 }
-    #close{
-        cursor: pointer;
-        position: relative;
-        display: none;
-        border: none;
-        background: transparent;
-        color: green;
-        left: 90%;
-    }
-    .close{
-        display: none;
-    }
 header nav li{
-    width: fit-content;
     cursor: pointer;
     display: inline-block;
     margin: 10px;
@@ -106,19 +113,63 @@ footer{
     width: 100%;
     min-height: 200px;
     color: var(--text_color1);
+    ul{
+        list-style-type: none;
+        font-size: 11px;
+        vertical-align: middle;
+    }
+    h2{
+        color: #fff;
+    }
+    .hr{
+        width: 100%;
+        display: block;
+        height: 0.5px;
+        background-color: var(--text_color1);
+    }
+    span img , span svg{
+        width: 20px;
+        height: 20px;
+    }
 }
-footer ul li{
-    color: #fff;
-    font-size: 13px;
-    list-style-type: none;
+footer .footer_social{
+    margin: 10px;
+    span{
+        margin-right: 3px;
+        width: fit-content;
+        height: fit-content;
+        padding: 10px 2px 0px 2px;
+        background: transparent;
+        box-shadow: 2px 4px 4px rgba(255, 255, 255, .2) inset , 2px 4px 4px rgba(255, 255, 255, .2);
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
-footer p{
-    text-align: center;
-    font-size: 10px;
-}
-footer img{
-    width: 20px;
-    height: 20px;
+footer #footer_links{
+    
+    ul{
+        list-style-type: none;
+        top: 25%;
+        position: relative;
+        
+    }
+    a{
+        text-decoration: none;
+        color: var(--text_color1);
+        margin: 5px;
+        cursor: pointer;
+    }
+    a::before{
+        display: inline-block;
+        content: "";
+        background: black;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        box-shadow: 3px 3px 15px rgb(0, 126, 67), -3px -3px 15px rgb(147, 183, 4);
+        margin: 5px;
+    }
+    
 }
 #skills{
     overflow-y: scroll;
@@ -137,6 +188,9 @@ footer img{
 }
 .flex.flex3{
     flex: 3;
+}
+.flex.flex05{
+    flex: 0.8;
 }
 aside{
     height: 400px;
@@ -174,10 +228,6 @@ main{
     position: relative;
     height: 600px;
 }
-.body section{
-    display: none;
-    height: 500px;
-}
 .home main{
     padding: 10px;
     overflow-y: auto;
@@ -199,7 +249,7 @@ main{
 .front_card{
     transition: all 2s cubic-bezier(0.25,0.8,0.25,1) ;
     width: 300px;
-    height: 400px;
+    height: 430px;
     filter: drop-shadow(-10px -20px 30px var(--text_color1));
     background: rgba(255, 255, 255, .2);
     border: solid 0.5px black;
@@ -220,7 +270,7 @@ main{
     position: absolute;
     top: 0;
     width: 300px;
-    height: 400px;
+    height: 430px;
     filter: drop-shadow(-10px -20px 30px var(--text_color1));
     background: rgba(255, 255, 255, .2);
     border: solid 0.5px black;
@@ -261,6 +311,15 @@ main{
     height: 200px;
     border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
 }
+
+
+
+
+
+
+
+
+
 .contact main .contact_body{
     box-sizing: border-box;
     border-radius: 30px;
@@ -365,6 +424,15 @@ main{
     }
     
 }
+
+
+
+
+
+
+
+
+
 #footer_contact{
     display: flex;
 }
@@ -384,6 +452,17 @@ main{
 .about_content span{
     margin: 2px;
 }
+
+
+
+
+
+
+
+
+
+
+
 /* Gallery image display style*/
 .image_container {
     width: 100%;
@@ -462,6 +541,19 @@ main{
 .close:hover{
     background-color: rgb(33,122,89);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Screen Loader */
 .screen_loader{
     display: none;
@@ -496,6 +588,10 @@ main{
     }
 }
 
+
+
+
+
 @media only screen and (max-width: 320px) {
     .image_container{
         width: 300px;
@@ -505,6 +601,14 @@ main{
         height: 300px;
     }
 }
+
+
+
+
+
+
+
+
 /* Past Projects*/
 .project{
     gap: 3px;
@@ -542,14 +646,31 @@ main{
 .home_main{
     overflow: hidden;
 }
+
+#style{
+    img{
+        width: 300px;
+        height: 100px;
+    }
+}
+
 @media only screen and (max-width: 700px) {
     .home_main{
         overflow: scroll;
     }
-    .logo2{
+    .layer{
+        display: none;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .6);
+        
+    }
+    .layeropen{
         display: block;
     }
-    #footer_contact{
+    .logo2{
         display: block;
     }
     .body{
@@ -558,37 +679,46 @@ main{
     .body section{
         height: fit-content;
     }
-    section .flexbox{
+    .flexbox{
         display: block;
     }
     aside{
         height: 450px;
+    }
+    .opennav{
+        left: 0;
     }
     .menubtn{
             display: block;
             float: right;
             position: fixed;
             z-index: 3;
+            margin: 3px;
+            
+        }
+        .menubtn.change{
+            content: 'X';
         }
     header{
         .open{
             visibility: visible;
         }
         nav{
-            visibility: hidden;
-            top: 40px;
+            transition: 0.75s all cubic-bezier(0.075, 0.82, 0.165, 1);
+            top: 3px;
+            left: -200px;
             position: fixed;
             z-index: 3;
             float: right;
-            height: 300px;
+            height: 100%;
             width: 200px;
 
             ul li {
                 display: block;
                 justify-content: space-evenly;
-                margin-bottom: 20px;
+                margin: 30px 20px 0 0;
                 padding: 10px;
-
+                
             }
             #close{
                 display: block;
