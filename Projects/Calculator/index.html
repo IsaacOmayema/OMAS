@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <a href="/default.html" style=" text-decoration: none; float: left; color: rgb(39,128,69); ">&lArr;</a>
+    
+    <div class="parent">
+        <input type="text" id="input" disabled placeholder="Evaluate a Question..">
+        <button class="clearAll" onclick="clearAll()">C</button><br>
+
+        <button onclick="one()" class="btn1">1</button>
+        <button onclick="two()" class="btn2">2</button>
+        <button onclick="three()" class="btn3">3</button>
+        <button onclick="multiply()" class="btnX">x</button>
+        <br>
+        <button onclick="four()" class="btn4">4</button>
+        <button onclick="five()" class="btn5">5</button>
+        <button onclick="six()" class="btn6">6</button>
+        <button onclick="divide()" class="btn/">/</button>
+        <br>
+        <button onclick="seven()" class="btn7">7</button>
+        <button onclick="eight()" class="btn8">8</button>
+        <button onclick="nine()" class="btn9">9</button>
+        <button onclick="equalTo()" class="equal">=</button>
+        <br>
+        <button onclick="plus()" class="btn+">+</button>
+        <button onclick="zero()" class="btn0">0</button>
+        <button onclick="subtract()" class="btn-">-</button>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

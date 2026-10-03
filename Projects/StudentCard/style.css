@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background: #f4f6f8;
+min-height: 100vh;
+padding: 30px;
+color: #222;
+}
+
+/* =========================
+MAIN LAYOUT
+========================= */
+
+.flex2,
+.flex1 {
+width: 100%;
+max-width: 1100px;
+margin: auto;
+}
+
+.flex2 {
+margin-bottom: 30px;
+}
+
+/* =========================
+STUDENT NUMBER SECTION
+========================= */
+
+#studentgenerator {
+background: white;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.addStudent {
+display: flex;
+gap: 10px;
+}
+
+#noOfStudents {
+flex: 1;
+padding: 13px 15px;
+border: 1px solid #ccc;
+border-radius: 8px;
+outline: none;
+font-size: 16px;
+}
+
+#noOfStudents:focus {
+border-color: #217a45;
+box-shadow: 0 0 0 3px rgba(33, 122, 69, 0.12);
+}
+
+/* Add student button */
+
+#addStudent,
+#aadStudent {
+width: 48px;
+border: none;
+border-radius: 8px;
+background: #217a45;
+color: white;
+font-size: 22px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+#addStudent:hover,
+#aadStudent:hover {
+background: #185c34;
+}
+
+#addStudent:disabled,
+#aadStudent:disabled {
+background: #aaa;
+cursor: not-allowed;
+}
+
+/* =========================
+ERROR MESSAGE
+========================= */
+
+#errormessage {
+margin-top: 10px;
+color: #d62828;
+font-size: 14px;
+font-weight: bold;
+}
+
+/* =========================
+STUDENT INPUT CARD
+========================= */
+
+#grader {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 20px;
+}
+
+.student-card {
+position: relative;
+background: white;
+padding: 25px 20px 20px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+border-top: 4px solid #217a45;
+}
+
+/* =========================
+CLOSE BUTTON
+========================= */
+
+.close-button {
+position: absolute;
+top: 10px;
+right: 10px;
+
+width: 28px;
+height: 28px;
+
+border: none;
+border-radius: 50%;
+
+background: #e63946;
+color: white;
+
+font-weight: bold;
+cursor: pointer;
+
+transition: 0.2s;
+
+}
+
+.close-button:hover {
+background: #b91c2a;
+transform: scale(1.05);
+}
+
+/* =========================
+STUDENT INPUTS
+========================= */
+
+.name-input,
+.age-input,
+.student-card select {
+width: 100%;
+padding: 12px;
+margin-bottom: 10px;
+
+border: 1px solid #ccc;
+border-radius: 7px;
+
+outline: none;
+font-size: 15px;
+background: white;
+
+}
+
+.name-input:focus,
+.age-input:focus,
+.student-card select:focus {
+border-color: #217a45;
+}
+
+/* =========================
+SCORES
+========================= */
+
+.scores-container {
+background: #f7f9f8;
+padding: 12px;
+border-radius: 8px;
+margin-bottom: 15px;
+}
+
+.scores-container h4 {
+margin-bottom: 10px;
+color: #217a45;
+}
+
+.score-input {
+width: calc(20% - 7px);
+padding: 10px 5px;
+margin: 3px;
+
+border: 1px solid #ccc;
+border-radius: 6px;
+
+text-align: center;
+outline: none;
+
+}
+
+.score-input:focus {
+border-color: #217a45;
+}
+
+/* =========================
+GENERATE BUTTON
+========================= */
+
+.generate {
+width: 100%;
+padding: 12px;
+
+border: none;
+border-radius: 7px;
+
+background: #217a45;
+color: white;
+
+font-size: 15px;
+font-weight: bold;
+
+cursor: pointer;
+transition: 0.2s;
+
+}
+
+.generate:hover {
+background: #185c34;
+transform: translateY(-1px);
+}
+
+/* =========================
+RESULT CARDS
+========================= */
+
+#cardDisplay {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 20px;
+}
+
+.card {
+position: relative;
+
+background: white;
+padding: 20px;
+
+border-radius: 12px;
+
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+border-left: 5px solid #217a45;
+
+}
+
+.card h3 {
+color: #217a45;
+margin-bottom: 12px;
+}
+
+.card p {
+margin: 8px 0;
+line-height: 1.5;
+}
+
+/* Result card close button */
+
+.card > input[type="button"] {
+position: absolute;
+top: 10px;
+right: 10px;
+
+width: 28px;
+height: 28px;
+
+border: none;
+border-radius: 50%;
+
+background: #e63946;
+color: white;
+
+font-weight: bold;
+cursor: pointer;
+
+}
+
+.card > input[type="button"]:hover {
+background: #b91c2a;
+}
+
+/* =========================
+MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+
+body {
+    padding: 15px;
+}
+
+#grader,
+#cardDisplay {
+    grid-template-columns: 1fr;
+}
+
+.score-input {
+    width: calc(20% - 7px);
+    font-size: 13px;
+}
+
+.student-card {
+    padding: 25px 15px 15px;
+}
+
+}

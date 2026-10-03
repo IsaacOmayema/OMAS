@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .backbtn {
+        float: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 40px;
+        border: 0;
+        background-color: transparent;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    .facebook {
+        background-color: blue;
+        color: white;
+        content: '&#1009;';
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+        box-shadow: -3px -6px 40px white;
+        transition: width;
+        border: none;
+    }
+
+    .facebook:hover {
+        width: fit-content;
+        transform: translateY(-5px);
+
+    }
+
+    .facebook:hover::after {
+        color: white;
+        font-family: Comic Sans MS;
+        text-shadow: -1px -1px 1px black;
+        content: 'Facebook';
+
+    }
+
+
+
+    .gmail {
+        background-color: red;
+        color: white;
+        content: '&#x2709;';
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+        box-shadow: -3px -6px 40px white;
+        transition: width;
+        border: none;
+    }
+
+    .gmail:hover {
+        width: fit-content;
+        transform: translateY(-5px);
+
+    }
+
+    .gmail:hover::after {
+        color: white;
+        font-family: Comic Sans MS;
+        text-shadow: -1px -1px 1px black;
+        content: 'Gmail';
+
+    }
+
+
+    .whatsapp {
+        background-color: green;
+        color: white;
+        content: '&#x2709;';
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+        box-shadow: -3px -6px 40px white;
+        transition: width;
+        border: none;
+    }
+
+    .whatsapp:hover {
+        width: fit-content;
+        transform: translateY(-5px);
+
+    }
+
+    .whatsapp:hover::after {
+        color: white;
+        font-family: Comic Sans MS;
+        text-shadow: -1px -1px 1px black;
+        content: 'WhatsApp';
+
+    }
+
+
+
+    .tiktok {
+        background: black;
+        color: white;
+        content: '&#x2709;';
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+        box-shadow: -3px -6px 40px white;
+        transition: width;
+        border: none;
+    }
+
+    .tiktok:hover {
+        width: fit-content;
+        transform: translateY(-5px);
+
+    }
+
+    .tiktok:hover::after {
+        color: white;
+        font-family: Comic Sans MS;
+        text-shadow: -1px -1px 1px black;
+        content: 'TikTok';
+
+    }
+
+    .instagram {
+        background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+        color: white;
+        content: '&#x2709;';
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+        box-shadow: -3px -6px 40px white;
+        transition: width;
+        border: none;
+    }
+
+    .instagram:hover {
+        width: fit-content;
+        transform: translateY(-5px);
+
+    }
+
+    .instagram:hover::after {
+        color: white;
+        font-family: Comic Sans MS;
+        text-shadow: -1px -1px 1px black;
+        content: 'Instagram';
+
+    }
+</style>
+
+<body>
+    
+    <a href="/default.html" style=" text-decoration: none; float: left; color: rgb(39,128,69); ">&lArr;</a>
+
+    <a href="https://www.facebook.com"><button class="facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="fbCircleTitle"
+                xmlns="http://www.w3.org/2000/svg">
+                <title id="fbCircleTitle">Facebook</title>
+                <!-- blue circle background -->
+                <circle cx="12" cy="12" r="12" fill="#1877F2" />
+                <!-- white "f" -->
+                <path fill="#ffffff"
+                    d="M15.117 8.574h-1.35c-.34 0-.81.167-.81.92v1.05h2.16l-.28 2.18h-1.88V21H10.5v-8.28H8.98V10.54h1.52V9.02c0-1.52.93-2.56 2.36-2.56.67 0 1.25.05 1.58.09v2.02z" />
+            </svg>
+        </button>
+    </a>
+    <a href="https://mail.google.com"><button class="gmail">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-labelledby="emailModernTitle">
+                <title id="emailModernTitle">Email</title>
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+                <polyline points="3 5 12 13 21 5" />
+            </svg>
+        </button>
+    </a>
+    <a href="https://wa.me"><button class="whatsapp"> <svg width="24" height="24" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="waCircleTitle">
+                <title id="waCircleTitle">WhatsApp</title>
+                <path fill="#25D366"
+                    d="M12.04 2c-5.51 0-9.98 4.47-9.98 9.98 0 1.76.46 3.49 1.33 5.02L2 22l5.12-1.34c1.48.8 3.15 1.22 4.9 1.22h.01c5.51 0 9.98-4.47 9.98-9.98C22.01 6.47 17.55 2 12.04 2z" />
+                <path fill="#fff"
+                    d="M17.47 14.37c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.9 1.13-.17.19-.34.21-.63.06-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.06-.15-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.48-.17 0-.36-.02-.55-.02-.19 0-.51.07-.78.36-.26.29-1 1-1 2.43 0 1.43 1.02 2.82 1.16 3.01.15.19 2 3.05 4.86 4.27.68.29 1.21.46 1.62.59.68.22 1.31.19 1.8.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z" />
+            </svg>
+        </button>
+    </a>
+    <a href="http://tiktok.com"><button class="tiktok">
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-labelledby="tiktokMonoTitle">
+                <title id="tiktokMonoTitle">TikTok</title>
+                <path
+                    d="M30.4 4h6.6c-.1 4.4 3.2 7.9 7.6 8v6.6c-2.8.1-5.5-.7-7.8-2.2v14.4c0 7.4-6 13.4-13.4 13.4S9.9 38.2 9.9 30.8 15.9 17.4 23.3 17.4c1 .0 2 .1 2.9.4v6.8c-.9-.3-1.9-.5-2.9-.5-3.7 0-6.7 3-6.7 6.7s3 6.7 6.7 6.7c3.7 0 6.7-3 6.7-6.7V4z" />
+            </svg>
+        </button>
+    </a>
+    <a href="https://www.instagram.com"><button class="instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-labelledby="instaTitle">
+                <title id="instaTitle">Instagram</title>
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="1.2" />
+            </svg>
+        </button>
+    </a>
+
+</body>
+
+
+</html>
